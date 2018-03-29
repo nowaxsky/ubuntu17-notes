@@ -1,4 +1,4 @@
-# ubunut17-06 Linux 檔案系統
+# ubuntu17-06 Linux 檔案系統
 ## 1. 硬碟分割
 * 若使用VirtualBox需要先新增一個SATA硬碟, 這時候在/dev/下才會出現sdb可供操作使用
 * 透過 `$ fdisk /dev/sdb` 劃分分割區
@@ -21,21 +21,24 @@
 ## 3. 檔案系統格式化
 * 檔案系統需要格式化後才能使用, 指令如下:
     * ext2: 
-        >$ mke2fs /dev/sdb1  
+        ```
+        $ mke2fs /dev/sdb1  
         $ mkfs.ext2 /dev/sdb1
     * ext3:
-        >$ mke2fs -j /dev/sdb1  
+        ```
+        $ mke2fs -j /dev/sdb1  
         $ mkfs.ext3 /dev/sdb1
     * ext4:
-        >$ mkfs.ext4 /dev/sdb1
-
+        ```
+        $ mkfs.ext4 /dev/sdb1
 ## 4. 掛載
 * 掛載意旨把裝置和某個特定目錄連接, 例如在Windows中插入USB可能是F槽,  
 意旨USB被掛載到這個F槽的目錄下. 假設在Linux中, 要將sdb1的區域掛載到/opt, 語法如下:
-    >$ mount /dev/sdb1 /opt
+    ```
+    $ mount /dev/sdb1 /opt
 * 使用umount可卸載:
-    >$ umount /opt
-
+    ```
+    $ umount /opt
 ## 5. 檔案類型
 * 輸入 `ls -l []` 可以查看目錄底下的檔案類型, 可由第一個英文字母來判斷:
     1. -為一般檔案
