@@ -1,4 +1,4 @@
-# ubuntu17-06 Linux 檔案系統
+# Ch06 檔案系統架構
 ## 1. 硬碟分割
 * 若使用VirtualBox需要先新增一個SATA硬碟, 這時候在/dev/下才會出現sdb可供操作使用
 * 透過 `$ fdisk /dev/sdb` 劃分分割區
